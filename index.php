@@ -1,49 +1,28 @@
-<?php
+<?php 
 
-// $allUsers = [
-//     'users' => [
-//         [
-//             'name' => 'John',
-//             'male' => true,
-//             'age' => 31
-//         ],
-//         [
-//             'name' => 'Casey',
-//             'male' => false,
-//             'age' => 16
-//         ],
-//         [
-//             'name' => 'Abraham',
-//             'male' => true,
-//             'age' => 21
-//         ]    
-//     ],    
-//     'admins' => [
-//         [
-//             'name' => 'Tom',
-//             'male' => true,
-//             'age' => 22
-//         ],
-//         [
-//             'name' => 'Jessica',
-//             'male' => false,
-//             'age' => 24
-//         ]
-            
-//     ]
-// ];
-
-$data = ['Passport', 'Photo', 'Certificate', 'Passport Copy'];
-
-
-function applyDocs($documents) {
-    echo 'You applied with following documents: ';
-    echo '<ul>';
-    foreach ($documents as $document) {
-        echo '<li>' . $document . '</li>';
-    }
-
-    echo '</ul>';
-}
-
-applyDocs($data);
+$students = [
+    [
+        'name' => 'Bill',
+        'age' => 19
+    ],
+    [
+        'name' => 'Selena',
+        'age' => 21
+    ],
+    [
+        'name' => 'Mark',
+        'age' => 20
+    ],
+    [
+        'name' => 'Elsa',
+        'age' => 18
+    ],
+    [
+        'name' => 'David',
+        'age' => 19
+    ],
+    [
+        'name' => 'Nick',
+        'age' => 21
+    ]
+]
