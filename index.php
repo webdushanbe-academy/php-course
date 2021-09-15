@@ -34,21 +34,22 @@ $workers = [
                     ]
             ]
         ]
-    ]
+    
 ];
 
-function raise($worker, $name, $raise)
-{
-    if ($worker['name'] == $name) {
-        $worker['salary'] += $raise;
+foreach ($workers as $first) {
+    foreach ($first as $second) {
+        foreach ($second as $third) {
+            echo '<br>Factory workers: <br>';
+
+            foreach ($third['factory'] as $factory) {
+                echo $factory['name'] . '  =>  ' . $factory['salary'] . '$<br>';
+            }
+
+            echo '<br>Office workers: <br>';
+            foreach ($third['office'] as $office) {
+                echo $office['name'] . '  =>  ' . $office['salary'] . '$<br>';
+            }
+        }
     }
-
-    return $worker;
 }
-
-foreach ($workers as $worker) {
-    $worker = raise($worker, 'Bill', 200);
-    $worker = raise($worker, 'Shaw', 300);
-    echo $worker['name'] . '    ' . $worker['salary'] . '$<br>';
-}
-
