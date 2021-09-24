@@ -1,0 +1,9 @@
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
