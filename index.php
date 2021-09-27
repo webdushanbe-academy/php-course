@@ -1,15 +1,15 @@
 <?php 
 
-$students = file_get_contents('students.txt');
+require('functions.php');
 
-$array = explode('---------------', $students);
-
-unset($array[sizeof($array) - 1]);
-
-foreach ($array as $student) {
-    echo $student . '<br>';
+if (isset($_GET['go'])) {
+    $name = $_GET['search'];
+    if (search($name)) {
+        $names = search($name);
+    } else {
+        $error = 'No Results!';
+    }
 }
-
 if (isset($_POST['add'])) {
     $name = $_POST['name'];
     $age = $_POST['age'];
@@ -25,6 +25,19 @@ if (isset($_POST['add'])) {
     <title>Register</title>
 </head>
 <body>
+    <ul>
+        <?php if (isset($error)) {?>
+            <?php echo $error; ?>
+            <?php } else { ?>
+                <?php foreach($names as $name) { ?>
+                    <li><?php echo $name; ?></li>
+                    <?php } ?>
+            <?php } ?>
+    </ul>
+    <form action="index.php" method="GET">
+        <input type="text" name="search">
+        <button type="submit" name="go">Search</button>
+    </form>
     <br><br>
     <form action="" method="POST">
         <div>

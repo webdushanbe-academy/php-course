@@ -7,3 +7,98 @@ Age: 19
 Name: Somon
 Age: 20
 ---------------
+Name: Qurbon
+Age: 21
+---------------
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------
+
+Name: Abdurahmon
+Age: 20
+---------------
+Name: Aziz
+Age: 19
+---------------
+Name: Somon
+Age: 20
+---------------
+Name: Qurbon
+Age: 21
+---------------Name: Oshurmo
+Age: 19
+---------------
