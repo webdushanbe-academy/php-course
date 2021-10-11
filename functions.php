@@ -1,36 +1,32 @@
 <?php 
 
-function search($word)
+define("HOST", "localhost");
+define("USER", "tom");
+define("PASSWORD", "ilovetom");
+define("DATABASE", "webdushanbe_academy");
+
+function connect() 
 {
-    $students = file_get_contents('students.txt');
+    $db = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
 
-    $array = explode('---------------', $students);
+    return $db;
+}
 
-    unset($array[sizeof($array) - 1]);
+function get_all() 
+{
+    $query = "SELECT * FROM `students`";
 
-    $s = [];
-    
-    foreach ($array as $student) {
-        $explode = explode(': ', $student);
-        $name = explode(' ', $explode[1]);
-        $name = explode(' ', $name[0]);
-        $s[] = $name[0];
-        // var_dump(explode(' ', $name[0])[0]);
-    }
+    return mysqli_query(connect(), $query);
+}
 
-    $names = [];
-    foreach ($s as $string) {
-        $string = str_replace('Age', '', $string);
+function create($data = []) 
+{
+    $name = $data['name'];
+    $age = $data['age'];
 
-        $names[] = $string;
-    }
+    $query = "INSERT INTO `students` (`course_id`, `name`, `age`) VALUES (1, '$name', '$age')";
 
-    $results = [];
-    foreach ($names as $name) {
-        if (strcmp($word, $name) == -1) {
-            $results[] = $name;
-        }
-    }
+    mysqli_query(connect(), $query);
 
-    return $results;
+    return "Success";
 }
