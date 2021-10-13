@@ -19,6 +19,15 @@ function get_all()
     return mysqli_query(connect(), $query);
 }
 
+function get_student_by_id($id)
+{
+    $query = "SELECT * FROM `students` WHERE `id` = $id";
+
+    $result = mysqli_query(connect(), $query);
+
+    return mysqli_fetch_assoc($result);
+}
+
 function create($data = []) 
 {
     $name = $data['name'];
@@ -29,4 +38,25 @@ function create($data = [])
     mysqli_query(connect(), $query);
 
     return "Success";
+}
+
+function delete_student($id)
+{
+    $query = "DELETE FROM `students` WHERE `id` = $id";
+
+    mysqli_query(connect(), $query);
+
+    return 'Success';
+}
+
+function edit($data = [])
+{
+    $name = $data['name'];
+    $age = $data['age'];
+
+    $query = "UPDATE `students` SET `name` = $name, `age` = $age";
+
+    mysqli_query(connect(), $query);
+
+    return 'Success';
 }
